@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>WMS</title>
+  </head>
+  <body>
+    <header>
+      <div class="header_links">
+        <a href="/">Daxil olmalar</a>
+        <a href="/create_import.html">Daxilolma yarat</a>
+      </div>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="box">
+        <form class="createImportForm">
+          <fieldset>
+            <label for="sender">Göndərən :</label>
+            <input type="text" />
+          </fieldset>
+          <fieldset>
+            <label for="receiver">Qəbul edən :</label>
+            <input type="text" />
+          </fieldset>
+          <fieldset>
+            <label for="location">Məkan :</label>
+            <input type="text" />
+          </fieldset>
+          <fieldset>
+            <label for="date">Tarix :</label>
+            <input type="date" />
+          </fieldset>
+          <div class="btn-group">
+            <button type="reset" class="blue-button">Sıfırla</button>
+            <button type="button" class="blue-button" id="addMoreDataBtn">
+              Əlavə et
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <button class="closeModalBtn">
+            <img src="./assets/icons/close-icon.png" alt="x" />
+          </button>
+        </div>
+        <form class="createImportForm">
+          <fieldset>
+            <label for="sender">Adı :</label>
+            <input type="text" />
+          </fieldset>
+          <fieldset>
+            <label for="receiver">Sayı :</label>
+            <input type="text" />
+          </fieldset>
+          <fieldset>
+            <label for="location">Ştrix kodu :</label>
+            <input type="text" />
+          </fieldset>
+          <fieldset>
+            <label for="date">Təsviri :</label>
+            <input type="text" />
+          </fieldset>
+          <div class="btn-group">
+            <button type="reset" class="blue-button">Sıfırla</button>
+            <button class="blue-button">Təsdiqlə</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./create_import.js"></script>
+  </body>
+</html>
