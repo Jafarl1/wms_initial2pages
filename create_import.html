@@ -9,8 +9,8 @@
   <body>
     <header>
       <div class="header_links">
-        <a href="/">Daxil olmalar</a>
-        <a href="/create_import.html">Daxilolma yarat</a>
+        <a href="/" class="nav-link">Daxil olmalar</a>
+        <a href="/create_import.html" class="nav-link">Daxilolma yarat</a>
       </div>
       <div class="logo">
         <h1>Logo</h1>
@@ -18,26 +18,32 @@
     </header>
     <div class="container">
       <div class="box">
-        <form class="createImportForm">
+        <form class="createImportForm" id="mainForm">
           <fieldset>
-            <label for="sender">Göndərən :</label>
-            <input type="text" />
+            <label for="sender">Göndərən:</label>
+            <input type="text" id="sender" name="sender" required />
           </fieldset>
           <fieldset>
-            <label for="receiver">Qəbul edən :</label>
-            <input type="text" />
+            <label for="receiver">Qəbul edən:</label>
+            <input type="text" id="receiver" name="receiver" required />
           </fieldset>
           <fieldset>
-            <label for="location">Məkan :</label>
-            <input type="text" />
+            <label for="location">Məkan:</label>
+            <input type="text" id="location" name="location" required />
           </fieldset>
           <fieldset>
-            <label for="date">Tarix :</label>
-            <input type="date" />
+            <label for="date">Tarix:</label>
+            <input type="date" id="date" name="date" required />
           </fieldset>
           <div class="btn-group">
-            <button type="reset" class="blue-button">Sıfırla</button>
-            <button type="button" class="blue-button" id="addMoreDataBtn">
+            <button type="reset" class="custom-button red-button">
+              Sıfırla
+            </button>
+            <button
+              type="button"
+              class="custom-button green-button"
+              id="addMoreDataBtn"
+            >
               Əlavə et
             </button>
           </div>
@@ -47,30 +53,44 @@
     <div class="modal" id="modal">
       <div class="modal-container">
         <div class="modal-header">
-          <button class="closeModalBtn">
-            <img src="./assets/icons/close-icon.png" alt="x" />
+          <button class="closeModalBtn" aria-label="Close modal">
+            <img src="./assets/icons/close-icon.png" alt="Close" />
           </button>
         </div>
-        <form class="createImportForm">
+        <form class="createImportForm" id="modalForm">
           <fieldset>
-            <label for="sender">Adı :</label>
-            <input type="text" />
+            <label for="item-name">Adı:</label>
+            <input type="text" id="item-name" name="item-name" required />
           </fieldset>
           <fieldset>
-            <label for="receiver">Sayı :</label>
-            <input type="text" />
+            <label for="item-quantity">Sayı:</label>
+            <input
+              type="text"
+              id="item-quantity"
+              name="item-quantity"
+              required
+            />
           </fieldset>
           <fieldset>
-            <label for="location">Ştrix kodu :</label>
-            <input type="text" />
+            <label for="item-barcode">Ştrix kodu:</label>
+            <input type="text" id="item-barcode" name="item-barcode" required />
           </fieldset>
           <fieldset>
-            <label for="date">Təsviri :</label>
-            <input type="text" />
+            <label for="item-description">Təsviri:</label>
+            <input
+              type="text"
+              id="item-description"
+              name="item-description"
+              required
+            />
           </fieldset>
           <div class="btn-group">
-            <button type="reset" class="blue-button">Sıfırla</button>
-            <button class="blue-button">Təsdiqlə</button>
+            <button type="reset" class="custom-button red-button">
+              Sıfırla
+            </button>
+            <button type="submit" class="custom-button green-button">
+              Təsdiqlə
+            </button>
           </div>
         </form>
       </div>

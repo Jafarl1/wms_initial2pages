@@ -17,6 +17,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+
 .header_links {
   display: flex;
   align-items: center;
@@ -24,7 +25,7 @@ header {
   gap: 10px;
   font-size: 16px;
 
-  a {
+  .nav-link {
     color: #6cbbfa;
     padding: 10px;
     border-radius: 10px;
@@ -35,9 +36,20 @@ header {
       color: white;
     }
   }
+
+  .nav-link.active {
+    background-color: #6cbbfa;
+    color: white;
+  }
 }
 .container {
   padding: 20px 120px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
 
   .box {
     width: 100%;
@@ -131,16 +143,30 @@ header {
   justify-content: end;
   gap: 15px;
 }
-.blue-button {
+.custom-button {
   height: fit-content;
   padding: 8px 15px;
   font-size: 14px;
   cursor: pointer;
-  border: 1px solid #6cbbfa;
-  background-color: #6cbbfa;
   color: white;
   border-radius: 4px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+}
+.blue-button {
+  border: 1px solid #6cbbfa;
+  background-color: #6cbbfa;
+}
+.purple-button {
+  border: 1px solid #8b45e1;
+  background-color: #8b45e1;
+}
+.red-button {
+  border: 1px solid #ff3f3f;
+  background-color: #ff3f3f;
+}
+.green-button {
+  border: 1px solid #18d26b;
+  background-color: #18d26b;
 }
 .modal {
   width: 100%;
@@ -185,4 +211,79 @@ header {
 }
 .show-modal {
   display: flex;
+}
+.departments {
+  .create-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a45ff8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0px 4px 0px rgba(28, 2, 60, 0.5);
+  }
+
+  .create-button:hover {
+    background-color: #8b45e1;
+  }
+
+  .department-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 4px;
+    margin-top: 20px;
+    border: 1px solid #ebebeb;
+    font-size: 15px;
+
+    th,
+    td {
+      width: 22%;
+      padding: 15px;
+      text-align: left;
+      border: 1px solid #ebebeb;
+
+      &:nth-child(3) {
+        width: 40%;
+      }
+      &:last-child {
+        min-width: 200px;
+      }
+    }
+
+    th {
+      background-color: #a45ff8;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+    td {
+      background-color: white;
+
+      &:hover {
+        background-color: #f4f4f4;
+      }
+    }
+
+    .edit-button,
+    .delete-button {
+      padding: 8px 18px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+      color: white;
+    }
+
+    .edit-button:hover {
+      background-color: #11be5f;
+    }
+
+    .delete-button:hover {
+      background-color: #e12f2f;
+    }
+  }
 }
